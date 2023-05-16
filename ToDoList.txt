@@ -1,0 +1,4 @@
+eat,high
+clean,low
+sleep,high
+dance,low
