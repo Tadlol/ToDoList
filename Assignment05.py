@@ -30,12 +30,16 @@ strSavExit = ""  # Save before exit choice
 # -- Processing -- #
 # Step 1 - When the program starts, load any data you have
 # in a text file called ToDoList.txt into a python list of dictionaries rows (like Lab 5-2)
-objFile = open(strFile, "r")
-for row in objFile:
-    strData = row.split(",")
-    dicRow = {"Task": strData[0], "Priority": strData[1].strip()}
-    lstTable.append(dicRow)
-objFile.close()
+try:
+    objFile = open(strFile, "r")
+    for row in objFile:
+        strData = row.split(",")
+        dicRow = {"Task": strData[0], "Priority": strData[1].strip()}
+        lstTable.append(dicRow)
+    objFile.close()
+    print("ToDo List imported successfully!")
+except:
+    print("Starting a new Todo List!")
 
 # -- Input/Output -- #
 # Step 2 - Display a menu of choices to the user
