@@ -70,7 +70,7 @@ while True:
     elif strChoice.strip() == '3':
         strRemTask = input("What task would you like to remove? ")
         for dicRow in lstTable:
-            if dicRow["Task"] == strRemTask:
+            if dicRow["Task"].lower() == strRemTask.lower():
                 lstTable.remove(dicRow)
                 print(strRemTask + " has been removed from the ToDo List.")
                 break
